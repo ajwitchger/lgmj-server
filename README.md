@@ -5,7 +5,7 @@ This machine provided by [*Vagrant*](https://www.vagrantup.com/) supports the fo
 * Official Ubuntu Server 14.04 LTS (Trusty Tahr)
 * Glassfish 4 Community Edition
 * MySQL Server 5.5
-* Oracle Java 7
+* Oracle Java 8
 
 ## Important note
 This machine is designed for development purposes and should not be used in production environments without
