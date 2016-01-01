@@ -26,4 +26,5 @@ Vagrant.configure(2) do |config|
   
   # Enable provisioning with a shell script.
   config.vm.provision :shell, path: "bootstrap.sh"
+  config.vm.provision :shell, path: "timezone.sh"
 end
