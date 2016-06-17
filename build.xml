@@ -1,0 +1,20 @@
+<project name="lgmj-server">
+    <property name="vagrant.exec">vagrant</property>
+    <target name="start" description="Start machine (provisioning on demand)">
+        <exec command="${vagrant.exec}">
+            <arg value="up" />
+        </exec>
+    </target>
+    <target name="stop" description="Terminate machine gracefully">
+        <exec command="${vagrant.exec}">
+            <arg value="halt" />
+        </exec>
+    </target>
+    <target name="destroy" description="Destroy machine without prompt">
+        <exec command="${vagrant.exec}">
+            <arg value="destroy" />
+            <arg value="--force" />
+        </exec>
+    </target>
+    <target name="restart" depends="stop, start" />
+</project>
