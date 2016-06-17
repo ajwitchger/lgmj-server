@@ -35,3 +35,10 @@ MySQL server is accessible from your host with credentials:
 ```
 mysql -u admin --password
 ```
+
+## Troubleshooting
+This section covers general errors which can occur while using vagrant.
+
+**Vagrant Not Starting Up. User that created VM doesn't match current user**
+
+Delete the folder .vagrant and rebuild the machine by calling _vagrant up_.
