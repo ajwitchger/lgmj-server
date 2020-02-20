@@ -6,16 +6,15 @@ export DEBIAN_FRONTEND=noninteractive
 # *****************************************************************************
 #	Preapring APT repositories
 # *****************************************************************************
-# Add repository for Oracle JDK
-add-apt-repository ppa:webupd8team/java -y
+# Add repository for Open JDK
+add-apt-repository ppa:openjdk-r/ppa -y
 apt-get update -y
 
 # *****************************************************************************
 #	Install system components
 # *****************************************************************************
-# Set Oracle License as accepted and install Java 8
-echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
-apt-get install oracle-java8-installer -y
+# Install Java 8
+apt-get install openjdk-8-jdk -y
 
 # Set MySQL password and install MySQL Server
 apt-get install mysql-client mysql-server mysql-server-5.5 mysql-client-5.5 -y -f
@@ -26,12 +25,12 @@ apt-get install unzip -y -f
 # *****************************************************************************
 #	Prepare Glassfish 4 installation including Domain and automatic startup
 # *****************************************************************************
-# Install Glassfish 4
+# Install Glassfish 4.1.2
 if ! [ -e /opt/glassfish4 ]; then
-	echo "Going to install Glassfish 4..."
-	wget http://download.java.net/glassfish/4.1.1/release/glassfish-4.1.1.zip
-	unzip glassfish-4.1.1.zip -d /opt
-	rm glassfish-4.1.1.zip
+	echo "Going to install Glassfish 4.1.2..."
+	wget http://download.java.net/glassfish/4.1.2/release/glassfish-4.1.2.zip 
+	unzip glassfish-4.1.2.zip -d /opt
+	rm glassfish-4.1.2.zip
 fi
 
 # Register automatic startup script if exists
