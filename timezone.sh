@@ -1,6 +1,6 @@
 #!/bin/bash
 # Edit this to set the timezone for your country 
-M_TIMEZONE=Europe/Berlin
+M_TIMEZONE=America/Chicago
 
 # -----------------------------------------------------------------------------
 #	Set timezone in non-interactive mode
